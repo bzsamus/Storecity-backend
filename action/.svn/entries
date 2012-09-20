@@ -1,0 +1,40 @@
+8
+
+dir
+41
+svn://61.63.24.71:3690/sauna/ingame/truck/action
+svn://61.63.24.71:3690/sauna
+
+
+
+2010-10-14T08:55:21.391226Z
+28
+ryan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c56fdd2c-9c7b-4520-8fdd-2f0594d8caf8
+
+gamelogic.php
+file
+61
+
+
+
+2010-10-20T04:23:37.000000Z
+258d3849f0bb3691d62de428be8b3cd7
+2010-10-20T04:23:43.333139Z
+61
+ryan
+

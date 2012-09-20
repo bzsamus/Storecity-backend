@@ -1,0 +1,32 @@
+<?php
+
+class Objecthandler{
+
+  private $reg = array();
+
+  function __construct(){
+    $this->_prefix = 'objhdl_';
+  }
+
+  public function getObject($objname,$id=null){
+    knightlover::load_model($objname);
+    if(class_exists($objname)){
+      $tmpobj = unserialize(knightlover::objcache()->get($this->_prefix.$objname));
+      //$tmpobj = '';
+      if(!$tmpobj){
+        $obj = new $objname($id);
+        $this->saveObject($obj);
+      }
+      else{
+        $obj = clone $tmpobj;
+      }
+      return $obj;
+    }
+  }
+
+  public function saveObject($obj){
+    $result = knightlover::objcache()->set($this->_prefix.get_class($obj), serialize($obj), _CACHE_TIME_LONG);
+  }
+}
+
+?>
